@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar Variable Public & Local pada JavaScript</h1>
+
+    <h2>A. Variable Local</h2>
+    <p style="color: blueviolet;" id="lokal"></p>
+
+    <h2>B. Variable Public</h2>
+    <p style="color: darkslateblue;" id="publik"></p>
+
+    <script>
+
+        variablelocal();
+        variablepublic();
+
+        // variablelocal => untuk mau dimunculin nya di dalam function 
+        function variablelocal(){
+            var kalimat = "Ini adalah Variable Lokal 🔚";
+            document.getElementById('lokal').innerHTML = kalimat;
+        }
+
+        // variablepublic => Kebaikan dari variablelocal, ditaruh di luar function
+        function variablepublic(){
+             teks = "ini adalah Variable Publik 🔜";
+             document.getElementById('publik').innerHTML = teks;
+        }
+
+        // Contoh Kedua
+
+        const namaPublic = "Ini Var Global atau Public";
+        
+        function cetakNama(){
+            let namaLocal = "Ini adalah Var Local"; 
+
+            function cetakNamaLokal(){
+                document.writeln(namaLocal);
+            }
+            return cetakNamaLokal;
+        }
+
+        let cetak = cetakNama();
+         
+        cetak();
+        document.writeln(namaPublic);
+    </script>
+</body>
+</html>

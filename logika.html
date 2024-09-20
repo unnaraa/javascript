@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Logika JavaScript</title>
+</head>
+<body>
+    <h1>Belajar Operator Logika pada JavaScript</h1>
+    <h2 style="color: burlywood;" id="logika"></h2>
+
+    <script>
+        // Operator logika ada 3, ada; &&, ||, dan != Negasi
+
+        var username = "aku";
+        var email = "anakIDN@gmail.com";
+        var password = "katasandi";
+        var hasil;
+
+        // true && true (kalau dikasarin) -> kedua datanya harus true, baru hasilnya true
+        
+        // if(email === "anakIDN@gmail.com" && password === "katasandi" ){
+        //     hasil = "Login berhasil";
+        // } else {
+        //     hasil = "Login gagal"; 
+        // }
+
+        // || = atau -> selama masih ada data yang true, maka hasilnya true
+        
+        // if(email === "anakIDN@gmail.commmm" || password === "katasandii" ){
+        //     hasil = "Login berhasil";
+        // } else {
+        //     hasil = "Login gagal";
+        // }
+
+        // ! = Negasi (munafik)
+        if(!(email === "anakIDN@gmail..com" || password === "kkatasandi") ){
+         hasil = "Login berhasil";
+        } else {
+         hasil = "Login gagal";
+        }
+
+        document.getElementById('logika').innerHTML = hasil;
+        console.table(hasil);
+        
+    </script>
+</body>
+</html>

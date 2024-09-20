@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar Percangan pada JavaScript</h1>
+
+    <!-- Percabangan / Branching adalah salah satu bentuk kontrol program, berguna untuk mengatur alur jalannya program sesuai dengan kondisi yang terpenuhi. -->
+
+    <!-- 
+    Ada 6 percabangan JavaScript :
+    1. if : kalau ada satu kondisi
+    2. If Else : ketika ada dua kondisi
+    3. If Else If : ketika kondisinya lebih dari dua 
+    4. Switch Case : bentuk lagi dari if else if, bisa banyak kondisi juga, tapi bentuknya beda.
+    5. Nested Branching : percabangan bersarang atau di dalam percabangan ada lagi percabangan.
+    6. ternary : konsep lain dari if else, juga punya dua kondisi, benar atau salah -->
+
+    <h1>1. Percabangan If </h1>
+    <h2 style="color: red;" id="if"></h2>
+
+    <h1>2. Percabangan If Else</h1>
+    <h2 style="color: brown;" id="ifelse"></h2>
+
+    <h1>3. Percabangan If Else If</h1>
+    <h2 style="color: chocolate;" id="ifelseif"></h2>
+
+    <h1>4. Percabangan Switch Case</h1>
+    <h2 style="color: blueviolet;" id="switchcase"></h2>
+
+    <h1>5. Percabangan Nested Branching</h1>
+    <label>Email</label><br>
+    <input type="email" id="email" required value=""> <br>
+    <label>Password</label><br>
+    <input type="password" id="password" required value=""> <br>
+    <button onclick="masuk()" style="background-color: blue; border-radius: 16px; border: none; padding: 10px 16px; margin-left: 40px; margin-top: 20px ;"> Log In</button>
+    <h2 style="color: darkslateblue;" id="nested"></h2>
+
+    <h1>6. Percabangan Ternary</h1>
+    <h2 style="color: indigo;" id="ternary"></h2>
+
+    <script>
+        // Percabangan If
+        var x = 10;
+        if(x > 5){ 
+            document.getElementById('if').innerHTML = "X lebih besar dari 5";
+        }
+
+        // Percabangan If Else
+        var y = 30;
+        var z = 20;
+        if( y <= z){
+        document.getElementById('ifelse').innerHTML = "Y lebih kecil dari Z";
+        }
+        else{
+        document.getElementById('ifelse').innerHTML = "Y lebih besar dari Z";
+        }
+
+        // Percabangan If Else If
+        var nilai = 90;
+
+        if (nilai >= 90){
+            document.getElementById('ifelseif').innerHTML = "Nilai A";
+        }else if (nilai >= 75){
+            document.getElementById('ifelseif').innerHTML = "Nilai B";
+        }else if (nilai >= 50){
+            document.getElementById('ifelseif').innerHTML = "Nilai C";
+        }else{
+            document.getElementById('ifelseif').innerHTML = "Nilai D";
+        }
+
+        // Percabangan Ternary (?) = Versi singkat dari if else
+        var pertanyaan = prompt('apakah kamu Unna?');
+        var jawaban = (pertanyaan.toUpperCase() == "IYAA" ) ? "Benarrr" : "Salah eu";
+
+        document.getElementById('ternary').innerHTML = jawaban;
+
+        // Percabagan Nested sama seperti var array tapi di array kan belum jelas ini data apa, dll
+        // data objek, banyak data dalam satu grup
+        var user = {
+            email: "unna.email@gmail.com",
+            password : 1234,
+            name: "unna",
+            grup: "TRPL A"
+        }
+
+        function masuk(){
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // percabangan bersarang/memfilter2 : (jika emailnya salah maka tidak bisa lanjut ke password tetapi jika email benar, password salah maka tidak bisa lanjut, dst. server akan menampilkan hasil yang kita isi apakah benar/salah)
+            if(user.email == email){
+                if(user.password == password){
+                    if(user.grup == "TRPL A"){
+                        location.replace('http://127.0.0.1:5501/BelajarJavaScript/hasilnested.html');
+                    }
+                }else{
+                    alert('Password Salah');
+                }
+            }else{
+                alert('Email Salah')
+            }
+        }
+        
+        // percabangan switch case
+            // var nilai = prompt('masukkan nilai anda');
+            // var hasil; 
+
+            // cara pertama
+            switch(true){
+                case nilai >= 90:
+                    hasil = 'A';
+                    document.getElementById('switchcase').innerHTML = hasil;
+                break; 
+                case nilai >= 80:
+                    hasil = 'B';
+                    document.getElementById('switchcase').innerHTML = hasil;
+                break; 
+                case nilai >= 70:
+                    hasil = 'C';
+                    document.getElementById('switchcase').innerHTML = hasil;
+                break; 
+                case nilai >= 60:
+                    hasil = 'D';
+                    document.getElementById('switchcase').innerHTML = hasil;
+                break; 
+                case nilai >= 50:
+                    hasil = 'E';
+                    document.getElementById('switchcase').innerHTML = hasil;
+                break;}
+    </script>
+</body>
+</html>

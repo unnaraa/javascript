@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar Function Pada JavaScript</h1>
+
+    <script>
+        function jay(){
+            document.writeln("Hello Jay")
+        }
+
+        jay()
+
+        function biodata(nama, umur){
+            document.writeln (`<h1> Haloo ${nama} umurnya ${umur} </h1>`);
+        }
+
+        // isi argumennya
+        biodata("Jay", 22);
+
+        // Function data
+        function data(namaDepan, namaBelakang){
+            var nama = `Nama saya ${namaDepan} ${namaBelakang}`;
+            return nama;
+        }
+    // pakai return berarti memberhentikan kode/data atau menjadi pembatas 
+        data("Jay",)
+        var hasil = data ("jay", "blabla");
+        document.writeln(hasil); 
+
+        function anakIDN(TRPL1, TRPL2, TRPL3){
+            document.writeln(`<h1> ${TRPL1} </h1>`);
+            document.writeln(`<h1> ${TRPL2} </h1>`);
+            document.writeln(`<h1> ${TRPL3} </h1>`);
+        }
+        
+        anakIDN('Kece Betthol', 50);
+
+        // undefind = data tidak ada
+
+        // Self-Invoking Function = function yang mengeksekusi dirinya sendiri
+        
+        // 1. TANPA PARAMETER
+        (function(){
+            document.writeln("Hello World!");
+        })();
+
+        // 2. DNGAN PARAMETER
+        (function(hallowww){
+            document.writeln(`Haii ${hallowww}`);
+        })("jangan lupa cenyuuummm");
+
+        
+    </script>
+</body>
+</html>

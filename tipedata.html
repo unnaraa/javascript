@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data</title>
+</head>
+<body>
+    <h1 style="color: brown;">Belajar Tipe Data JavaScript</h1>
+
+    <h1 style="color: blue;">Tipe Data String</h1>
+    <h2 style="color: blue;" id="string"></h2>
+
+    <h1 style="color: blueviolet;">Tipe Data Number</h1>
+    <h2 style="color: blueviolet;" id="number"></h2>
+
+    <h1 style="color: darkgreen;">Tipe Data Booelan</h1>
+    <h2 style="color: darkgreen;" id="boolean"></h2>
+
+    <h1 style="color: dimgrey;">Tipe Data Array</h1>
+    <h2 style="color: rgb(19, 12, 12);" id="array"></h2>
+
+    <script>
+        var dataString = " Hai kamu"
+        document.getElementById('string').innerHTML = dataString;
+        // var dataString = " Hai kamu"
+        // document.getElementById('string').innerHTML = dataString.toLocaleUpperCase();
+        // toLocaleUpperCase() = buat string/huruf kapital
+
+        // var dataNumber = 29;
+        // document.getElementById('number').innerHTML = "Angka: " + dataNumber;
+
+        var a = 5;
+        var b = 1;
+        var c = a - b ;  
+        document.getElementById('number').innerHTML = c;
+
+        var dataBoolean = true
+        document.getElementById('boolean').innerHTML = "Nilai: " + dataBoolean;
+
+            // Array = kumpulan tipe data, bisa menyimpan banyak data apapun typenya
+        
+        // var dataArray = ["AAA", "aaa", "aAa", "AaA",];
+        // document.getElementById('array').innerHTML = dataArray ;
+        
+        // kalau mau mengeluarkan data berdasarkan index
+        // var dataArray = ["Orang", "Manusia", "Makhluk", "dll"];
+        // document.getElementById('array').innerHTML = dataArray[1];
+
+        // tambahin .length = buat hitung ada berapa data array
+        // var dataArray = ["Orang", "Manusia", "Makhluk", "dll"];
+        // document.getElementById('array').innerHTML = dataArray.length;
+
+
+        dataArray[1]
+        document.getElementById('array').innerHTML = dataArray
+
+        // nambahin data baru dipaling belakang
+
+        dataArray.push("Ola")
+        document.getElementById('array').innerHTML = dataArray
+    </script>
+
+</body>
+</html>

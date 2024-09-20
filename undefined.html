@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar Type Data Null dan Undefined pada JavaScript</h1>
+
+    <h2 style="color: dodgerblue;" id="un"></h2>
+
+    <script>
+
+        //  Undefined itu variabelnya ada tapi isinya atau valuenya ngga ada
+
+        // Kalau null itu variabelnya ada, isinya ada tapi isinya/ditampilkan null atau outputnya kosong  
+
+        var a; // Variabel a bernilai undefined
+        var b = null; // variabel b bernilai null
+
+        document.getElementById('un').innerHTML = a;
+
+        document.getElementById('un').innerHTML = b;
+
+        //  Undefined Variable
+        // let umur = false;
+        // let data = umur;
+
+        // if(umur === undefined){
+        //     data = "Benar Undefined";
+        // }else{
+        //     data = "Bukan Undefined";
+        // }
+        // document.getElementById('un').innerHTML = data;
+
+        //  Undefined Variable
+        let umur1;
+        let data = umur1;
+
+        if(umur1 === undefined){
+            data = "Benar Undefined";
+        }else{
+            data = "Bukan Undefined";
+        }
+        document.getElementById('un').innerHTML = data;
+
+        // Undefined Dalam Array
+
+        const Makhluk = ["Malaikat", "Manusia", "Hewan"]; //kalau pun ditambah null berarti tetap undefined karena null itu hadir sebagai value eaaa
+        if(Makhluk[1] === undefined){
+            document.getElementById('un').innerHTML = "Makhluk tidak ada karena bukan undefined";
+        }else{
+            document.getElementById('un').innerHTML = "Makhluk ada karena bukan undefined";
+        }
+    </script>
+</body>
+</html>

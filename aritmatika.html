@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmatika JavaScript</title>
+</head>
+<body>
+    <h1>Belajar Aritmatika JavaScript</h1>
+    <h2 style="color: lightseagreen; text-align: center;" id="arit" ></h2>
+
+    <h1>Operator Augmented Assigment</h1>
+    <h2 style="color: lightseagreen; text-align: center;" id="AA"></h2>
+
+    <h1>Operator Unary</h1>
+    <h2 style="color: blueviolet; text-align: center;" id="unary"></h2>
+
+    <script>
+        // operator aritmatika 
+        var a = 20;
+        var b = 9;
+        var c = a + b; //hasilnya 29
+        
+        // document.getElementById('arit').innerHTML = c;
+
+        // a + b; (pertambahan)
+        //  a - b; (pengurangan)
+        //  a * b; (perkalian)
+        //  a ** b; (eksponensial)
+        //  a / b; (pembagian)
+
+
+        var c = a + b;
+        c = c - 1; //=28
+        c = c * 2 //=56
+        tess = c + 1; //57
+        teslagi = tess + 10; //67
+        document.getElementById('arit').innerHTML = teslagi;
+
+
+        // operator augmented assigment => Penyederhanaan dari aritmatika, code yg singkat 
+        let e = 2;
+        e/= 2; //1
+        document.getElementById('AA').innerHTML = e;
+
+        // Operator Unary
+        // + => Menandakan nilai positif
+        // - => Menandakan nilai negatif
+        // ++ => Increment, menaikkan satu angka
+        // -- => Decrement, munurunkan satu angka
+        let f = +9;
+        f--; //hasilnya 8
+        f++; //menurun: (8=)ditambah 1
+        
+        document.getElementById('unary').innerHTML = f;
+
+
+
+    </script>
+</body>
+</html>

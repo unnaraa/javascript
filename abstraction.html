@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar Abstaction pada JavaScript</h1>
+
+    <h2 style="color: blue; text-shadow: 2px 2px 5px black;" id="nyala" ></h2>
+    <h2 style="color: black; text-shadow: 2px 2px 5px blue;" id="mati" ></h2>
+
+    <script>
+        const Lampu = (function(){
+            var status = 'mati'; //variable lokal
+
+            return {
+                menyala: function() { //method menyala
+                    if (status === 'mati'){
+                    status = 'menyala';
+                    document.getElementById('nyala').innerHTML = 'Lampu hidup';
+                }else{
+                    document.getElementById('nyala').innerHTML = 'Lampu sudah berada dalam keadaan nyala';
+                }
+                },
+                mati: function(){
+                    if (status === 'menyala'){
+                        status = 'mati';
+                        document.getElementById('mati').innerHTML = 'Lampu Mati';
+                    }else{
+                        document.getElementById('mati').innerHTML = 'Lampu sudah berada dalam keadaan mati';
+                    }
+                },
+                getStatus: function(){
+                    return status;
+                }
+            };
+        }) ();
+
+        Lampu.menyala();
+        Lampu.mati();
+
+
+    </script>
+</body>
+</html>

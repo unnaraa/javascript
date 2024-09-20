@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar Encapsulation di JavaScript</h1>
+
+    <h2 style="color: blue;" id="encap"></h2>
+
+    <!-- Encapsulasi = sebenarnya funsinya cuma umtuk menyembunyikan detail implementasi suatu kode, jadi user cuma tau cara pakai function atau method nya, tapi ga tau implementasi nya kayak gimana. 
+     Dan ini bikin kode llbih aman, fleksibel dan mudah untuk dikembangkan -->
+
+    <script>
+        const Kalkulator = (function(){
+            let total = 0;
+
+            return {
+
+                tambah: function(angka){
+                    total += angka;
+                },
+
+                kurang: function(angka){
+                    total -= angka;
+                },
+
+                getTotal: function(){
+                    return total;
+                }
+            };
+        }) (); 
+
+        Kalkulator.tambah(20);
+        Kalkulator.tambah(10);
+        document.getElementById('encap').innerHTML = `Total: ${Kalkulator.getTotal()}`;
+    </script>
+</body>
+</html>

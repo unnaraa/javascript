@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar String Template</h1>
+    <h2 style="color: blue;" id="str"></h2>
+
+    <script>
+        let nama = "orang";
+        let umur = 19;
+        let asal = "IDN" ;
+        let tujuan = ["satu", " dua", " tiga", " empat", " lima"];
+
+        // syarat menggunakan StringTemplate Backtick (`)
+        // cara manggil variabel pakai dolar, kurungkurawal isinya variabel = ${nama variabel}
+        
+        // document.getElementById('str').innerHTML = ``;
+        document.getElementById('str').innerHTML = `Nama ${nama} Umurnya ${umur} Asalnya ${asal} ada ${tujuan[2]}`;
+    </script>
+</body>
+</html>
